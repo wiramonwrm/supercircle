@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import video1 from "../video1.mp4";
+import video1 from "../video3.mp4";
 import "./HeroSection.css";
 function HeroSection() {
   return (

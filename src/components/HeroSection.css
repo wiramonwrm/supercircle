@@ -1,13 +1,13 @@
 video {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   z-index: -1;
+  max-width: 1502px;
 }
 
 .hero-container {
   height: 100vh;
   width: 100%;
-  /* display: flex; */
 }
