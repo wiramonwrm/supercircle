@@ -1,0 +1,25 @@
+.img-container {
+  height: 85vh;
+  width: 100%;
+  background-color: black;
+  display: block;
+}
+
+.img-component {
+  height: 10%;
+  width: 10%;
+}
+
+.moving-btn {
+  height: 30px;
+  width: 150px;
+  background-color: salmon;
+  border: 5px solid pink;
+  padding: 5px;
+  float: left;
+  text-align: center;
+}
+
+.moving-btn::hover {
+  cursor: pointer;
+}
