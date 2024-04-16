@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/supercircle" exact element={<Home />} />
+          <Route path="/supercircle" exact element={<Projects />} />
           <Route path="/" exact element={<Home />} />
           <Route path="/projects" exact element={<Projects />} />
           <Route path="/contact" exact element={<Contact />} />
