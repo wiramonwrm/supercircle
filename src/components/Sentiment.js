@@ -9,6 +9,7 @@ const Sentiment = () => {
   const [metadata, setMetadata] = useState(null);
   const [inputText, setInputText] = useState("");
   const [result, setResult] = useState("");
+  const [score, setScore] = useState("");
 
   const loadModel = async () => {
     const loadedModel = await tf.loadLayersModel(
@@ -37,9 +38,10 @@ const Sentiment = () => {
       );
       const input = inputBuffer.toTensor();
       const prediction = await model.predict(input);
-      const score = prediction.dataSync()[0];
+      const scoreTemp = prediction.dataSync()[0];
       prediction.dispose();
-      setResult(score > 0.5 ? "positive" : "negative");
+      setResult(scoreTemp > 0.5 ? "positive" : "negative");
+      setScore(scoreTemp);
       console.log(result);
     }
   };
@@ -69,6 +71,7 @@ const Sentiment = () => {
             />
             <button onClick={analyseSentiment}>submit</button>
           </div>
+          {score ? <p className="score">Score: {score}</p> : ""}
         </div>
       )}
     </div>
